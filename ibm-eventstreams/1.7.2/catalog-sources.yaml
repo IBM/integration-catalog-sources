@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eventstreams
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eventstreams-1.7.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-eventstreams-catalog@sha256:1e64909f7ff41a104cd9181f7fb9b9582d6ef494f5d0cc093d5cc0499b36c6e4
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

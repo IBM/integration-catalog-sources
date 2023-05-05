@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: aspera-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aspera-hsts-operator-1.5.7
+  publisher: IBM
+  image: icr.io/cpopen/aspera-hsts-catalog@sha256:3c930d47c0aca1127bac1feeba932f19218ba2235a416505dead5cb92d351c2c
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
